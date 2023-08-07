@@ -1,0 +1,91 @@
+.container {
+  width: 630px;
+  height: 500px;
+
+  background-color: white;
+  border: 2px solid green;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Lato";
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+hr {
+  width: 70%;
+  margin: 16px auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 66%;
+  gap: 16px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  color: gray;
+}
+
+.formInput {
+  outline: 0;
+  background: darken(white, 5);
+  border: 0;
+  margin-top: 4px;
+  padding: 16px;
+  font-size: 1em;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  height: 16px;
+  text-align: center;
+}
+
+.button {
+  margin: 0 auto;
+  padding: 12px;
+  width: 50%;
+  font-family: "Lato";
+  font-size: 1em;
+  color: gray;
+  background-color: transparent;
+  outline: 0;
+
+  border: 2px solid green;
+  transition: color 0.5s ease;
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: green;
+      color: white;
+
+      transition: background-color 0.5s ease;
+    }
+
+    &:active {
+      background-color: darken(green, 10);
+      color: white;
+
+      transition: background-color 0.5s ease;
+    }
+  }
+
+  &:disabled {
+    background-color: lightgray;
+    border: 2px solid lightgray;
+  }
+}
